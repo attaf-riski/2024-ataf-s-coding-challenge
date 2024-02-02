@@ -1,0 +1,15 @@
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/bin/Debug/net8.0/c#
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/bin/Debug/net8.0/c#.deps.json
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/bin/Debug/net8.0/c#.runtimeconfig.json
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/bin/Debug/net8.0/c#.dll
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/bin/Debug/net8.0/c#.pdb
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/c#.GeneratedMSBuildEditorConfig.editorconfig
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/c#.AssemblyInfoInputs.cache
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/c#.AssemblyInfo.cs
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/c#.csproj.CoreCompileInputs.cache
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/c#.sourcelink.json
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/c#.dll
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/refint/c#.dll
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/c#.pdb
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/c#.genruntimeconfig.cache
+/Users/attafriski/Desktop/ataf's-coding-challenge/c#/obj/Debug/net8.0/ref/c#.dll
