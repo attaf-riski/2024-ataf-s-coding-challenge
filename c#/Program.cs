@@ -1,15 +1,22 @@
-﻿
-using System;
+﻿using System;
 
-public class OddEven
+public class Kata
 {
+
     public static void Main(string[] args)
     {
-        Console.WriteLine(evenOrOdd(2));
+        Console.WriteLine(CreatePhoneNumber([1,2,3,4,5,6,7,8,9,0]));
     }
 
-    public static string evenOrOdd(int number)
+    // cara 1 
+    // public static string CreatePhoneNumber(int[] numbers)
+    // {
+    //         return $"({numbers[0]}{numbers[1]}{numbers[2]}) {numbers[3]}{numbers[4]}{numbers[5]}-{numbers[6]}{numbers[7]}{numbers[8]}{numbers[9]}";
+    // }
+
+    // cara 2
+    public static string CreatePhoneNumber(int[] numbers)
     {
-        return (number % 2 == 0) ? "Even" : "Odd";
+            return string.Format("({0}{1}{2}) {3}{4}{5}-{6}{7}{8}{9}", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9]);
     }
 }
