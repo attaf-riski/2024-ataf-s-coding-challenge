@@ -1,22 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Kata
 {
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(CreatePhoneNumber([1,2,3,4,5,6,7,8,9,0]));
+        Console.WriteLine(IsPangram("The quick brown fox jumps over the lazy dog."));
     }
-
-    // cara 1 
-    // public static string CreatePhoneNumber(int[] numbers)
+    // O(n) solution
+    // public static bool IsPangram(string str)
     // {
-    //         return $"({numbers[0]}{numbers[1]}{numbers[2]}) {numbers[3]}{numbers[4]}{numbers[5]}-{numbers[6]}{numbers[7]}{numbers[8]}{numbers[9]}";
+    //     str = str.ToLower();
+    //     for (char c = 'a'; c <= 'z'; c++)
+    //     {
+    //         if (str.IndexOf(c) == -1)
+    //         {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
     // }
-
-    // cara 2
-    public static string CreatePhoneNumber(int[] numbers)
-    {
-            return string.Format("({0}{1}{2}) {3}{4}{5}-{6}{7}{8}{9}", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9]);
-    }
 }
