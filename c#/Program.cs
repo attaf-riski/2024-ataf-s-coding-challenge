@@ -1,24 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// https://www.codewars.com/kata/54ff3102c1bad923760001f3
 
-public class Kata
+using System;
+
+public static class Kata
 {
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(IsPangram("The quick brown fox jumps over the lazy dog."));
+        Console.WriteLine(GetVowelCount("hello"));
     }
-    // O(n) solution
-    // public static bool IsPangram(string str)
-    // {
-    //     str = str.ToLower();
-    //     for (char c = 'a'; c <= 'z'; c++)
-    //     {
-    //         if (str.IndexOf(c) == -1)
-    //         {
-    //             return false;
-    //         }
-    //     }
-    //     return true;
-    // }
+
+    public static int GetVowelCount(string str)
+    {
+        int vowelCount = 0;
+        foreach(char c in str){
+            switch (c){
+                case 'a':
+                    vowelCount++;
+                    break;
+                case 'i':
+                    vowelCount++;
+                    break;
+                case 'u':
+                    vowelCount++;
+                    break;
+                case 'e':
+                    vowelCount++;
+                    break;
+                case 'o':
+                    vowelCount++;
+                    break;
+            }
+        }
+
+        return vowelCount;
+    }
 }
