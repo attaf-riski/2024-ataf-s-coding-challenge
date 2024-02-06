@@ -1,4 +1,4 @@
-﻿// https://www.codewars.com/kata/54ff3102c1bad923760001f3
+﻿// https://www.codewars.com/kata/514b92a657cdc65150000006/train/csharp
 
 using System;
 
@@ -7,32 +7,25 @@ public static class Kata
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(GetVowelCount("hello"));
+        Console.WriteLine(ThreeOrFive(10));
+        Console.WriteLine(ThreeOrFive(20));
+        Console.WriteLine(ThreeOrFive(200));
+        Console.WriteLine(ThreeOrFive(0));
     }
 
-    public static int GetVowelCount(string str)
+    public static int ThreeOrFive(int number)
     {
-        int vowelCount = 0;
-        foreach(char c in str){
-            switch (c){
-                case 'a':
-                    vowelCount++;
-                    break;
-                case 'i':
-                    vowelCount++;
-                    break;
-                case 'u':
-                    vowelCount++;
-                    break;
-                case 'e':
-                    vowelCount++;
-                    break;
-                case 'o':
-                    vowelCount++;
-                    break;
-            }
+        if (number <= 0)
+        {
+            return 0;
         }
 
-        return vowelCount;
+        int buffer = 0;
+        for(int i = 3;i<number;i++){
+            if(i % 3 == 0 || i % 5 == 0){
+                buffer += i;
+            }
+        }
+        return buffer;
     }
 }
