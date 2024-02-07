@@ -7,25 +7,20 @@ public static class Kata
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(ThreeOrFive(10));
-        Console.WriteLine(ThreeOrFive(20));
-        Console.WriteLine(ThreeOrFive(200));
-        Console.WriteLine(ThreeOrFive(0));
+        Console.WriteLine(Narcissistic(153));
+
     }
 
-    public static int ThreeOrFive(int number)
+    public static bool Narcissistic(int value)
     {
-        if (number <= 0)
+        int sum = 0;
+        int fixvalue = value;
+        int square = value.ToString().Length;
+        for(int i=0;i<square;i++)
         {
-            return 0;
+            sum += (int)Math.Pow(value % 10,square);
+            value /= 10;
         }
-
-        int buffer = 0;
-        for(int i = 3;i<number;i++){
-            if(i % 3 == 0 || i % 5 == 0){
-                buffer += i;
-            }
-        }
-        return buffer;
+        return sum == fixvalue;
     }
 }
