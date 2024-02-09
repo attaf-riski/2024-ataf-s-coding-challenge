@@ -1,4 +1,4 @@
-﻿// https://www.codewars.com/kata/514b92a657cdc65150000006/train/csharp
+﻿// https://www.codewars.com/kata/546f922b54af40e1e90001da/train/csharp
 
 using System;
 using System.Collections.Generic;
@@ -8,26 +8,22 @@ public static class Kata
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(TwoSum([1,5,3],4).ToString());
+        Console.WriteLine(AlphabetPosition("."));
     }
 
-    public static int[] TwoSum(int[] numbers, int target)
+    public static string AlphabetPosition(string text)
     {
-        Dictionary<int, int> numIndices = new Dictionary<int, int>();
-
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            int complement = target - numbers[i];
-
-            if(numIndices.ContainsKey(complement)){
-                return new int[]{numIndices[complement],i};
-            }
-
-            if(!numIndices.ContainsKey(numbers[i])){
-                numIndices.Add(numbers[i],i);
+        text = text.ToUpper();
+        string result = "";
+        for(int i=0;i<text.Length;i++){
+            if(text[i] >= 65 && text[i] <= 90){
+                result += (Convert.ToInt32(text[i])-64);
+                result += " ";
             }
         }
-
-        return new int[]{0,0};
+        if(result.Length == 0){
+            return result;
+        }
+        return result[..^1];
     }
 }
