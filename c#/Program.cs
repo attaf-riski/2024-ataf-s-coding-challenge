@@ -1,4 +1,4 @@
-﻿// https://www.codewars.com/kata/546f922b54af40e1e90001da/train/csharp
+﻿// https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/csharp
 
 using System;
 using System.Collections.Generic;
@@ -8,22 +8,35 @@ public static class Kata
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(AlphabetPosition("."));
+        Console.WriteLine(DuplicateEncode("recede"));
     }
 
-    public static string AlphabetPosition(string text)
+   public static string DuplicateEncode(string word)
+  {
+    Dictionary<char, int> dict = new Dictionary<char, int>();
+    word = word.ToLower();
+    foreach (char c in word)
     {
-        text = text.ToUpper();
-        string result = "";
-        for(int i=0;i<text.Length;i++){
-            if(text[i] >= 65 && text[i] <= 90){
-                result += (Convert.ToInt32(text[i])-64);
-                result += " ";
-            }
-        }
-        if(result.Length == 0){
-            return result;
-        }
-        return result[..^1];
+      if (dict.ContainsKey(c))
+      {
+        dict[c]++;
+      }
+      else
+      {
+        dict.Add(c, 1);
+      }
     }
+    foreach (char c in word)
+    {
+      if (dict[c] > 1)
+      {
+        word = word.Replace(c, ')');
+      }
+      else
+      {
+        word = word.Replace(c, '(');
+      }
+    }
+    return word;
+  }
 }
