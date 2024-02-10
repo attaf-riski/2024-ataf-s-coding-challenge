@@ -8,35 +8,31 @@
 
 //     public static void Main(string[] args)
 //     {
-//         Console.WriteLine(DuplicateEncode("recede"));
+//         Console.WriteLine(DuplicateEncode("...It Should encode XXX"));
 //     }
 
-//    public static string DuplicateEncode(string word)
-//   {
-//     Dictionary<char, int> dict = new Dictionary<char, int>();
-//     word = word.ToLower();
-//     foreach (char c in word)
+//     public static string DuplicateEncode(string word)
 //     {
-//       if (dict.ContainsKey(c))
-//       {
-//         dict[c]++;
-//       }
-//       else
-//       {
-//         dict.Add(c, 1);
-//       }
+//         Dictionary<char, int> letterCount = new Dictionary<char, int>();
+//         var letters = word.ToLower().ToCharArray();
+
+//         foreach (char letter in letters)
+//         {
+//             if (letterCount.ContainsKey(letter))
+//                 letterCount[letter]++;
+//             else
+//                 letterCount.Add(letter, 1);
+//         }
+
+//         string result = "";
+//         foreach (char letter in letters)
+//         {
+//             if (letterCount[letter] > 1)
+//                 result += ")";
+//             else
+//                 result += "(";
+//         }
+
+//         return result;
 //     }
-//     foreach (char c in word)
-//     {
-//       if (dict[c] > 1)
-//       {
-//         word = word.Replace(c, ')');
-//       }
-//       else
-//       {
-//         word = word.Replace(c, '(');
-//       }
-//     }
-//     return word;
-//   }
 // }
