@@ -8,18 +8,29 @@ public static class Kata
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(IsPrime(5));
+        Console.WriteLine(sqInRect(5, 3));
     }
 
-    public static bool IsPrime(int n)
+    public static List<int> sqInRect(int lng, int wdth)
     {
-        if (n < 2) return false;
-        if (n == 2) return true;
-        if (n % 2 == 0) return false;
-        for (int i = 3; i <= Math.Sqrt(n); i += 2)
+        List<int> result = new List<int>();
+        if (lng == wdth)
         {
-            if (n % i == 0) return false;
+            return null;
         }
-        return true;   
+        while (lng > 0 && wdth > 0)
+        {
+            if (lng > wdth)
+            {
+                result.Add(wdth);
+                lng -= wdth;
+            }
+            else
+            {
+                result.Add(lng);
+                wdth -= lng;
+            }
+        }
+        return result;
     }
 }
