@@ -1,36 +1,51 @@
-﻿// https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/csharp
+﻿// https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/csharp
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public static class Kata
 {
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(sqInRect(5, 3));
+        Console.WriteLine(RomanDecode("IV")); // 1
     }
 
-    public static List<int> sqInRect(int lng, int wdth)
+
+
+    public static int RomanDecode(string roman)
     {
-        List<int> result = new List<int>();
-        if (lng == wdth)
+        Dictionary<char, int> romanNumerals = new Dictionary<char, int>
         {
-            return null;
-        }
-        while (lng > 0 && wdth > 0)
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000}
+        };
+
+        int result = 0;
+        int previous = 0;
+
+        foreach (char numeral in roman.Reverse())
         {
-            if (lng > wdth)
+            int value = romanNumerals[numeral];
+
+            if (value < previous)
             {
-                result.Add(wdth);
-                lng -= wdth;
+                result -= value;
             }
             else
             {
-                result.Add(lng);
-                wdth -= lng;
+                result += value;
             }
+
+            previous = value;
         }
+
         return result;
     }
 }
